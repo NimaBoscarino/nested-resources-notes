@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<body>
+  <h1>House of Memes</h1>
+  <h2><%= @meme.name %></h2>
+  <h3><%= @meme.description %></h3>
+ 
+  <p>New post for <%= @meme.name %></p>
+ 
+  <%= form_for([@meme, @post]) do |f| %>
+    <%= f.hidden_field :meme_id, value: @meme.id %>
+    <%= f.text_field :name %>
+    <%= f.text_field :image %>
+    <%= f.submit "Create" %>
+  <% end %>
+
+  <ul>
+  <% @posts.each do |post| %>
+    <li>
+      <%= button_to "delete", [@meme, post], :method => :delete %>
+      <h3><%= post.name %></h3>
+      <img src="<%= post.image %>" style="height: 100px;" />
+    </li>
+  <% end %>
+  </ul>
+
+</body>
+</html>

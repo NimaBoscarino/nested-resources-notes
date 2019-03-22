@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<body>
+  <h1>House of Memes</h1>
+  <%= link_to 'Mememaster mode', mememaster_memes_path %>
+  <h2>Ooooh boi we have some tasy memes here</h2>
+  <img src="https://previews.123rf.com/images/auremar/auremar1212/auremar121202844/16950753-italian-chef.jpg" style="height: 200px;"/>
+
+  <%= link_to 'New Meme', new_meme_path %>
+
+  <ul>
+  <% @memes.each do |meme| %>
+    <li>
+      <h3><%= meme.name %></h3>
+      <p><%= meme.description %></p>
+      <img src="<%= meme.image %>" style="height: 100px;" />
+      <%= link_to 'View Posts', meme_path(meme) %>
+    </li>
+  <% end %>
+  </ul>
+
+</body>
+</html>

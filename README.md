@@ -1,24 +1,20 @@
-# README
+# W 7 D 5
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Meme Catalogue
 
-Things you may want to cover:
 
-* Ruby version
+Meme Categories (Memes)
+  - posts
 
-* System dependencies
+GET /memes (all of them)
+GET /memes/:id (one of them)
+POST /memes (new meme)
 
-* Configuration
+just say memes is a piece of data thing... so we can do the usual stuff.
 
-* Database creation
+resoures :thing
 
-* Database initialization
+Meme Posts (Posts)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+NIMA PUT IN NOTES DON VIDEO
